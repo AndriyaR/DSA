@@ -1,0 +1,29 @@
+CREATE DATABASE task4;
+USE task4;
+
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    mark INT,
+    department VARCHAR(50),
+    sections VARCHAR(10)
+);
+
+
+INSERT INTO student (id, name, mark, department, sections) VALUES
+(1, 'abi', 95, 'CT', 'A'),
+(2, 'daisy', 57, 'IT', 'B'),
+(3, 'rosy', 75, 'BCA', 'A');
+
+
+ALTER TABLE student ADD COLUMN gender VARCHAR(10);
+
+UPDATE student SET gender = 'female' WHERE id IN (1, 2, 3);
+
+ALTER TABLE student DROP COLUMN sections;
+
+SELECT * FROM student;
+
+TRUNCATE TABLE student;
+
+DROP DATABASE task;

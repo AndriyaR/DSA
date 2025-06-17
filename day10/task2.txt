@@ -1,0 +1,5 @@
+CREATE DATABASE enter;
+USE enter;
+CREATE table student(name varchar(50),mark char,department char,sections char);
+INSERT INTO student(name,mark,department,sections)values("andriya","95","CT","A");
+SELECT *from student
